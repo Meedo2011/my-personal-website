@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
 
         // Send email using EmailJS
-        emailjs.sendForm('service_xmu5ag5', 'template_cg7nxik', this)
+        const serviceID = 'default_service';
+   const templateID = 'template_cg7nxik';
+        emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
                 const thankYouElement = document.querySelector('.thank-you');
                 thankYouElement.style.display = 'block';
